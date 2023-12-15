@@ -1,0 +1,143 @@
+@import 'scss-reset/reset';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+$pageColor: #F9F9F9;
+$purpleColor: #6C5FBC;
+
+%for-flex {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  background-color: $pageColor;
+}
+
+.root, .App {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.banner {
+  @extend %for-flex;
+  justify-content: space-between;
+}
+
+.banner__subtitle {
+  font: {
+    family: Poppins;
+    weight: 600;
+    size: 15px;
+  }
+  color: #201F1F33;
+  letter-spacing: 2px;
+  display: inline-block;
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 18px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 54px;
+    height: 2px;
+    background-color: rgba(32, 31, 31, 0.2);
+  }
+}
+
+.banner-info {
+  flex: 1 1 49%;
+}
+
+.banner__title {
+  font: {
+    family: Poppins;
+    weight: 600;
+    size: 75px;
+  }
+  line-height: 90px;
+  letter-spacing: -3px;
+  color: #201F1F;
+  margin-bottom: 16px;
+
+  & span {
+    color: #5C4EAE;
+  }
+}
+
+.banner__text {
+  font: {
+    family: Inter;
+    weight: 400;
+    size: 18px;
+  }
+  color: #676767;
+  margin-bottom: 53px;
+
+  & span {
+    font-weight: 500;
+    color: #6155AE;
+  }
+}
+
+.banner-buttons {
+  font: {
+    family: Poppins;
+    weight: 500;
+    size: 16.27px;
+  }
+
+  margin-bottom: 33px;
+
+  .banner__button {
+    letter-spacing: 1%;
+    line-height: 24.41px;
+    border-radius: 12.41px;
+  }
+
+  .start {
+    width: 156px;
+    height: 59px;
+    background-color: $purpleColor;
+    color: #FFFFFF;
+    line-height: 24.41px;
+    margin-right: 18px;
+  }
+
+  .pro {
+    width: 110px;
+    height: 59px;
+    border: 1.5px solid $purpleColor;
+    color: $purpleColor;
+  }
+}
+
+.banner-rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating__trustpilot {
+  margin-right: 20px;
+}
+
+.rating__star {
+  margin-right: 4px;
+}
+
+.rating__score {
+  font: {
+    family: Inter;
+    weight: 500;
+    size: 16px;
+  }
+  color: #334155;
+  margin-left: 10px;
+}
