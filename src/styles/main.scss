@@ -26,6 +26,7 @@ body {
 .banner {
   @extend %for-flex;
   justify-content: space-between;
+  margin-top: 90px;
 }
 
 .banner__subtitle {
@@ -51,9 +52,8 @@ body {
     background-color: rgba(32, 31, 31, 0.2);
   }
 }
-
 .banner-info {
-  flex: 1 1 49%;
+  flex: 0 0 44%;
 }
 
 .banner__title {
