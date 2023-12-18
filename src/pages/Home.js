@@ -37,6 +37,27 @@ const Home = () => {
           <Food />
         </section>
       </div>
+
+      <section className="statistics">
+      <div className="container">
+          <div className="statistics-info">
+            <article>
+              <h2 className="statistics__title">10K+</h2>
+              <p className="statistics__text">Satisfied Costumers
+              All <br/> Great Over The World </p>
+            </article>
+            <article>
+              <h2 className="statistics__title">4M</h2>
+              <p className="statistics__text">Healthy Dishes Sold <br/> Including Milk Shakes Smooth</p>
+            </article>
+            <article>
+              <h2 className="statistics__title">99.99%</h2>
+              <p className="statistics__text">Reliable Customer Support <br/> We Provide Great Experiences</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }

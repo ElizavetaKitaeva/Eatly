@@ -1,5 +1,5 @@
-import food from './Food.svg'
-import Graph from './Graph.png'
+import food from './img/Food.svg'
+import Graph from './img/Graph.png'
 import './style.scss'
 
 const Food = () => {
