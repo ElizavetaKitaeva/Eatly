@@ -1,6 +1,9 @@
 import trustpilot from "../img/trustpilot.svg"
 import star from "../img/star.svg"
 import Food from "../components/food/Food";
+import Phone from "../components/phone/Phone";
+import Restaurants from "../components/restaurants/Restaurants";
+import { restaurants } from "../helpers/restaurants";
 
 function Stars() {
   const elements = [];
@@ -57,6 +60,45 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <div className="container">
+        <section className="mobileVertion">
+          <Phone />
+          <article className="mobileVertion-info">
+            <h2 className="mobileVertion__title">Premium <span>Quality</span> For Your Health</h2>
+            <ul className="mobileVertion__list">
+              <li className="mobileVertion__mark">
+                <p className="mobileVertion__text">Premium quality food is made with ingredients that are packed with essential vitamins, minerals.</p>
+              </li>
+              <li className="mobileVertion__mark">
+                <p className="mobileVertion__text">These foods promote overall wellness by support healthy digestion and boosting immunity.</p>
+              </li>
+            </ul>
+            <button className="mobileVertion__button"><p>Download</p></button>
+          </article>
+        </section>
+
+        <section className="rests-block">
+          <h2 className="rests__title">Our Top <span>Restaurants</span></h2>
+            <div className="rests-cards">
+              {restaurants.map((restaurant, index) => {
+                return <Restaurants 
+                  key={index} 
+                  name={restaurant.name} 
+                  type={restaurant.type} 
+                  time={restaurant.time} 
+                  rating={restaurant.rating} 
+                  img={restaurant.img}
+                />
+              })}
+            </div>
+
+            <button className="rests__viewButton">
+            <p>View All</p>
+            </button>
+            
+        </section>
+      </div>
 
     </main>
   );
