@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/eatly/static/css/main.136de34d.css",
-    "main.js": "/eatly/static/js/main.59e1434f.js",
+    "main.js": "/eatly/static/js/main.af246e89.js",
     "static/media/Food.svg": "/eatly/static/media/Food.a19c677186ac798c5a775abc5da3742f.svg",
     "static/media/Screenshot.png": "/eatly/static/media/Screenshot.b94da97d59f3de2298a6.png",
     "static/media/chikenKing.jpg": "/eatly/static/media/chikenKing.cd8cc31597fdc0dc176c.jpg",
@@ -29,10 +29,10 @@
     "static/media/arrow-right.svg": "/eatly/static/media/arrow-right.1f8ed745295fc246c6c7.svg",
     "static/media/chevron-down.svg": "/eatly/static/media/chevron-down.9d3d4e38ad7c0a899100.svg",
     "main.136de34d.css.map": "/eatly/static/css/main.136de34d.css.map",
-    "main.59e1434f.js.map": "/eatly/static/js/main.59e1434f.js.map"
+    "main.af246e89.js.map": "/eatly/static/js/main.af246e89.js.map"
   },
   "entrypoints": [
     "static/css/main.136de34d.css",
-    "static/js/main.59e1434f.js"
+    "static/js/main.af246e89.js"
   ]
 }
