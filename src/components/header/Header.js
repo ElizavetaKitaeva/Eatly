@@ -1,36 +1,35 @@
 import {NavLink} from "react-router-dom"
-import logo from './logo.svg'
 import './style.scss'
+import Logo from "../logo/Logo";
+import SignUp from "../SignUp/SignUp";
 
 const Header = () => {
   return (
+    <>
     <header className="header">
       <div className="container">
         <div className="header-body">
-          <NavLink className="header__logo logo" to="/">
-              <img src={logo} alt="logo"></img>
-              <span className="header__logo-title">eatly</span>
-          </NavLink>
+        <Logo />
 
           <nav className="header-navigation">
             <ul className="header-list">
               <li className="header-list__element">
-                <NavLink className="header-list__link" to="/">
+                <NavLink className="header-list__link" to="/Menu">
                   <span>Menu</span>
                 </NavLink>
               </li>
               <li className="header-list__element">
-                <NavLink className="header-list__link" to="/">
+                <NavLink className="header-list__link" to="/Blog">
                   <span>Blog</span>
                 </NavLink>
               </li>
               <li className="header-list__element">
-                <NavLink className="header-list__link" to="/">
+                <NavLink className="header-list__link" to="/Pricing">
                   <span>Pricing</span>
                 </NavLink>
               </li>
               <li className="header-list__element">
-                <NavLink className="header-list__link" to="/">
+                <NavLink className="header-list__link" to="/Contact">
                   <span>Contact</span>
                 </NavLink>
               </li>
@@ -45,6 +44,10 @@ const Header = () => {
         </div>
       </div>
     </header>
+
+    <SignUp />
+    </>
+    
   );
 }
  

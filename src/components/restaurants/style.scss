@@ -1,35 +1,16 @@
-$purpleColor: #6C5FBC;
-
-%for-flex {
-  display: flex;
-  align-items: center;
-}
+@import '../../styles/helpers.scss';
 
 .rests-block {
-  padding-bottom: 120px;
-  margin-bottom: 100px;
-  border-bottom: 1px solid #CBCBCB;
+  @extend %border-bottom;
 }
 
 .rests__title {
   text-align: center;
-  font: {
-    family: Poppins;
-    weight: 600;
-    size: 45px;
-  }
-  color: #323142;
-
-  & span {
-    color: $purpleColor;
-  }
-  
   margin-bottom: 87px;
 }
 
 .rests-cards {
-  @extend %for-flex;
-  justify-content: space-between;
+  @extend %for-flexJC;
   margin-bottom: 66px;
 }
 
@@ -47,9 +28,8 @@ $purpleColor: #6C5FBC;
 
   & article {
     margin-left: 33px;
-    display: flex;
+    @extend %for-flexJC;
     align-items: flex-end;
-    justify-content: space-between
   }
 
   &:hover {
@@ -59,11 +39,7 @@ $purpleColor: #6C5FBC;
 
 .rest-criteria {
   @extend %for-flex;
-  font: {
-    family: Manrope;
-    weight: 400;
-    size: 19.34px;
-  }
+  @include Manrope400(19.34px);
   color: #8E97A6;
 }
 
@@ -79,21 +55,13 @@ $purpleColor: #6C5FBC;
 }
 
 .rest__type {
-  font: {
-    family: Poppins;
-    weight: 400;
-    size: 12.78px;
-  }
+  @include font($titleFont, 400, 12.78px);
   line-height: 19.16px;
 }
 
 .rest__name {
-  font: {
-    family: Poppins;
-    weight: 600;
-    size: 25.79px;
-  }
-  color: #323142;
+  @include fontTitle(25.79px);
+  color: $addButton;
 }
 
 .rest__rating {
@@ -124,12 +92,8 @@ $purpleColor: #6C5FBC;
 }
 
 .rests__viewButton {
-  font: {
-    family: Poppins;
-    weigth: 500;
-    size: 20px;
-  }
-  color: #ACADB9;
+  @include fontBtn(20px);
+  color: $info;
   float: right;
   clear: left;
   width: 112.8px;

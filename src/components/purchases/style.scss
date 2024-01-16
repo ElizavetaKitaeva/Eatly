@@ -1,37 +1,20 @@
-$purpleColor: #6C5FBC;
-
-%for-flex {
-  display: flex;
-  align-items: center;
-}
-
+@import '../../styles/helpers.scss';
 
 .purchases {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 138px;
-  margin-bottom: 116px;
-  border-bottom: 1px solid #CBCBCB;
+  @extend %border-bottom;
 }
 
 .purchases__info-title {
   margin-bottom: 48px;
-  font: {
-    family: Poppins;
-    weight: 700;
-    size: 53.38px;
-  }
-
-  & span {
-    color: $purpleColor;
-  }
 }
 
 .purchases-stats {
   width: 534px;
   height: 466.46px;
   border-radius: 25.13px;
-  background-color: #FFFFFF;
+  background-color: $cardColor;
   border: 1.57px solid #EDF2F7;
   box-shadow: 6.84841775894165px 82.18101501464844px 41.09050750732422px 0px #E5E5E5B2;
   padding: 41px 45px;
@@ -45,13 +28,12 @@ $purpleColor: #6C5FBC;
   width: 345.17px;
   height: 88.3px;
   border-radius: 12.04px;
-  background-color: #FFFFFF;
-  @extend %for-flex;
-  justify-content: space-between;
+  background-color: $cardColor;
+  @extend %for-flexJC;
   padding-left: 17px;
   padding-right: 17px;
   margin-bottom: 15px;
-  color: #323142;
+  color: $addButton;
 }
 
 .purchases__image {
@@ -62,53 +44,32 @@ $purpleColor: #6C5FBC;
 
 .purchases__time {
   margin-top: 45px;
-  color: #ACADB9;
-  font: {
-    family: Poppins;
-    weight: 600;
-    size: 13.04px;
-  }
+  color: $info;
+  @include fontTitle(13.04px);
 }
 
 .purchases__title {
-  font: {
-    family: Poppins;
-    weight: 600;
-    size: 19.06px;
-  }
+  @include fontTitle(19.06px);
 }
 
 .purchases__text {
-  font: {
-    family: Poppins;
-    weight: 500;
-    size: 12.04px;
-  }
+  @include fontBtn(12.04px);
 }
 
 .purchases-stats-date {
-  @extend %for-flex;
-  justify-content: space-between;
+  @extend %for-flexJC;
   margin-bottom: 38px;
 }
 
 .purchases__stats-title {
-  font: {
-    family: Manrope;
-    weight: 800;
-    size: 28.27px;
-  }
+  @include font($timeCard, 800, 28.27px);
 }
 
 .purchases__date {
   display: block; 
   width: 175.91px;
   height: 53.4px;
-  font: {
-    family: Manrope;
-    weight: 600;
-    size: 18.85px;
-  }
+  @include font($timeCard, 600, 18.85px);
   color: #1A202C;
   border: none;
   border-radius: 12.56px;
@@ -134,8 +95,7 @@ $purpleColor: #6C5FBC;
 }
 
 .purchases-progress__info {
-  @extend %for-flex;
-  justify-content: space-between;
+  @extend %for-flexJC;
   margin-bottom: 20px;
 
   & div {
@@ -179,7 +139,7 @@ $purpleColor: #6C5FBC;
     width: 296.84px;
     height: 9.42px;
     border-radius: 78.53px;
-    background-color: #6C5FBC;
+    background-color: $accentColor;
     display: block;
   }
 }
@@ -194,26 +154,14 @@ $purpleColor: #6C5FBC;
 .purchases-progress__text {
   & span {
     color: #1A202C;
-    font: {
-      family: Manrope;
-      weight: 800;
-      size: 18.85px;
-    }
+    @include font($timeCard, 800, 18.85px);
   }
   letter-spacing: 0.63 px;
-  font: {
-    family: Manrope;
-    weight: 500;
-    size: 15.71px;
-  }
-  color: #A0AEC0;
+  @include font($timeCard, 500, 15.71px);
+  color: $info;
 }
 
 .purchases-progress__price {
   color: #1A202C;
-  font: {
-    family: Manrope;
-    weight: 800;
-    size: 21.99px;
-  }
+  @include font($timeCard, 800, 21.99px);
 }

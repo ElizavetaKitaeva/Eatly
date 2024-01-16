@@ -6,6 +6,7 @@ import RestaurantsBlock from "../components/restaurants/RestaurantsBlock";
 import DishesBlock from "../components/dishes/DishesBlock";
 import PurchasesBlock from "../components/purchases/PurchasesBlock";
 import SaysBlock from "../components/says/SaysBlock";
+import Sale from "../components/sale/Sale";
 
 function Stars() {
   const elements = [];
@@ -24,7 +25,7 @@ const Home = () => {
         <section className="banner">
           <div className="banner-info">
             <p className="banner__subtitle">OVER 1000 USERS</p>
-            <h1 className="banner__title">Enjoy Foods All Over The <span>World</span></h1>
+            <h1 className="banner__title title">Enjoy Foods All Over The <span>World</span></h1>
             <p className="banner__text">EatLy help you set saving goals, earn cash back offers, Go to disclaimer for 
             more details and get paychecks up to two days early. <span>Get a $20 bonus.</span></p>
             <div className="banner-buttons">
@@ -67,7 +68,7 @@ const Home = () => {
         <section className="mobileVertion">
           <Phone />
           <article className="mobileVertion-info">
-            <h2 className="mobileVertion__title">Premium <span>Quality</span> For Your Health</h2>
+            <h2 className="mobileVertion__title title">Premium <span>Quality</span> For Your Health</h2>
             <ul className="mobileVertion__list">
               <li className="mobileVertion__mark">
                 <p className="mobileVertion__text">Premium quality food is made with ingredients that are packed with essential vitamins, minerals.</p>
@@ -76,7 +77,13 @@ const Home = () => {
                 <p className="mobileVertion__text">These foods promote overall wellness by support healthy digestion and boosting immunity.</p>
               </li>
             </ul>
-            <button className="mobileVertion__button"><p>Download</p></button>
+            <button className="mobileVertion__button">
+              <p>Download</p>
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.55469 13.5469H22.3588" stroke="white" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14.4561 5.64453L22.3581 13.5466L14.4561 21.4487" stroke="white" stroke-width="2.25773" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </article>
         </section>
 
@@ -84,8 +91,8 @@ const Home = () => {
         <DishesBlock />
         <PurchasesBlock />
         <SaysBlock />
+        <Sale />
       </div>
-
     </main>
   );
 }

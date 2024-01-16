@@ -1,35 +1,16 @@
-$purpleColor: #6C5FBC;
-
-%for-flex {
-  display: flex;
-  align-items: center;
-}
+@import '../../styles/helpers.scss';
 
 .dish-block {
-  padding-bottom: 120px;
-  margin-bottom: 100px;
-  border-bottom: 1px solid #CBCBCB;
+  @extend %border-bottom;
 }
 
 .dish__title {
   text-align: center;
-  font: {
-    family: Poppins;
-    weight: 600;
-    size: 45px;
-  }
-  color: #323142;
-
-  & span {
-    color: $purpleColor;
-  }
-  
   margin-bottom: 87px;
 }
 
 .dish-cards {
-  @extend %for-flex;
-  justify-content: space-between;
+  @extend %for-flexJC;
   margin-bottom: 65px;
 }
 
@@ -37,8 +18,8 @@ $purpleColor: #6C5FBC;
   width: 224.63px;
   height: 390.36px;
   box-shadow: 6.84841775894165px 82.18101501464844px 41.09050750732422px 0px #E5E5E5B2;
-  background-color: #FFFFFF;
-  border: 1.44px solid #F4F4F6;
+  background-color: $cardColor;
+  border: 1.44px solid $cardBorder;
   border-radius: 34.58px;
   padding-top: 36px;
   padding-left: 15px;
@@ -48,33 +29,24 @@ $purpleColor: #6C5FBC;
 
   & article {
     margin-left: 9px;
-    display: flex;
+    @extend %for-flexJC;
     align-items: flex-end;
-    justify-content: space-between
   }
 
-  &:hover {
+  &:hover, &:focus {
     transform: scale(1.1);
   }
 }
 
 .dish-criteria {
   @extend %for-flex;
-  font: {
-    family: Manrope;
-    weight: 400;
-    size: 17.34px;
-  }
-  color: #8E97A6;
+  @include Manrope400(17.34px);
+  color: $info;
 }
 
 .dish__name {
-  font: {
-    family: Poppins;
-    weight: 600;
-    size: 25.79px;
-  }
-  color: #323142;
+  @include fontTitle(25.79px);
+  color: $addButton;
 }
 
 .dish__rating {
@@ -98,11 +70,7 @@ $purpleColor: #6C5FBC;
 }
 
 .dish__type {
-  font: {
-    family: Poppins;
-    weight: 400;
-    size: 12.78px;
-  }
+  @include font($titleFont, 400, 12.78px);
   line-height: 19.16px;
 }
 
@@ -118,23 +86,17 @@ $purpleColor: #6C5FBC;
 }
 
 .dish__price {
-  font: {
-    family: Manrope;
-    weight: 700;
-    size: 25.94px;
-  }
-
+  @include font($timeCard, 700, 25.94px);
   & span {
     font-size: 18.81px;
-    color: #8E97A6;
+    color: $info;
   }
 }
 
 .dish-buy {
   margin-top: 13px;
   width: 174.18px;
-  @extend %for-flex;
-  justify-content: space-between;
+  @extend %for-flexJC;
 }
 
 .dish__button {
@@ -142,17 +104,19 @@ $purpleColor: #6C5FBC;
   height: 39.72px;
   border-radius: 8.93px;
   background: url("./img/plus.svg") no-repeat;
-  background-color: #323142;
+  background-color: $addButton;
   background-position: center;
+  transition: 0.5s;
+
+  &:hover, &:focus {
+    background-color: $accentColor;
+    transition: 0.5s;
+  }
 }
 
 .dish__viewButton {
-  font: {
-    family: Poppins;
-    weigth: 500;
-    size: 20px;
-  }
-  color: #ACADB9;
+  @include fontBtn(20px);
+  color: $info;
   float: right;
   clear: left;
   width: 112.8px;
@@ -177,11 +141,29 @@ $purpleColor: #6C5FBC;
 .favorite-button {
   position: absolute;
   right: 0;
+  
 
   & input {
-    width: 0;
-    height: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    left: 1px;
+    opacity: 0;
+    transition: 0.5s;
   }
+
+  & input:checked + .favorite__image path {
+    fill: $accentColor;
+    transition: 0.5s;
+  }
+
+  & input:not(checked) + .favorite__image path {
+    fill: #DBD9EE;
+    transition: 0.5s;
+  }
+
 }
 
 .favorite__image {

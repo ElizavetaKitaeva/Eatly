@@ -1,3 +1,5 @@
+@import '../../styles/helpers.scss';
+
 .plate {
   margin-right: 9.5%;
   max-width: 40%;
@@ -62,23 +64,19 @@
   width: 328.7px;
   height: 89.45px;
   border-radius: 16.41px;
-  background-color: #FFFFFF;
+  background-color: $cardColor;
   position: absolute;
   box-shadow: -9.843755722045898px 12.304695129394531px 20.50782585144043px 0px #00000026;
   padding: 5px 16px;
   top: -10px;
   right: -100px;
   font-family: Poppins;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
+  @extend %for-flexJC;
 }
 
 .card__info {
-  display: flex;
-  align-items: center;
-  color: #323142;
+  @extend %for-flex;
+  color: $headerColor;
 }
 
 .card__image {
@@ -102,10 +100,7 @@
   color: #ACADB9;
   line-height: 14.93px;
   margin-top: 50px;
-  font: {
-    weight: 500;
-    size: 10.66px;
-  }
+  @include fontBtn(10.66px)
 }
 
 .card-stats {

@@ -1,38 +1,9 @@
-
-$purpleColor: #6C5FBC;
-$navColor: #606060;
-$pageColor: #F9F9F9;
-
-%for-flex {
-  display: flex;
-  align-items: center;
-}
-
-.header {
-
-}
+@import '../../styles/helpers.scss';
 
 .header-body {
   padding: 30px 0px 25px;
-  border-bottom: 2px solid #cbcbcb;
-  @extend %for-flex;
-  justify-content: space-between;
-}
-
-.header__logo {
-  @extend %for-flex;
-  text-decoration: none;
-  margin-right: 100px;
-}
-
-.header__logo-title {
-  font: {
-    family: Poppins;
-    size: 21.18px;
-    weight: 600;
-  }
-  color: $purpleColor;
-  margin-left: 11px;
+  border-bottom: 2px solid $borderBottomColor;
+  @extend %for-flexJC;
 }
 
 .header-navigation {
@@ -40,16 +11,12 @@ $pageColor: #F9F9F9;
 }
 
 .header-list__link {
-  font: {
-    family: Inter;
-    size: 18px;
-    weight: 500;
-  }
-  color: $navColor;
+  @include Inter500(18px);
+  color: $textHeaderColor;
   text-decoration: none;
 
   &:hover {
-    color: $purpleColor;
+    color: $accentColor;
   }
 }
 
@@ -62,10 +29,7 @@ $pageColor: #F9F9F9;
 }
 
 .header-buttons {
-  font: {
-    family: Inter;
-    size: 18px;
-  }
+  @include Inter700(18px);
 }
 
 .header__button {
@@ -76,11 +40,22 @@ $pageColor: #F9F9F9;
 
 .auth {
   margin-right: 9px;
-  color: $navColor;
+  color: $textHeaderColor;
+  &:hover, &:focus {
+    color: $accentColor;
+    transition: 0.5s;
+  }
 }
 
 .registr {
-  color: $pageColor;
-  background-color: $purpleColor;
+  color: $backgroundColor;
+  background-color: $accentColor;
   border-radius: 17.83px;
+  border: 1.5px solid $accentColor;
+  transition: 0.5s;
+
+  &:hover, &:focus {
+    @extend %activePurpleButton;
+    transition: 0.5s;
+  }
 }

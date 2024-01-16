@@ -5,7 +5,7 @@ const PurchasesBlock = () => {
   return ( 
     <section className="purchases">
       <div className="purchases-info">
-        <h2 className="purchases__info-title">Control <span>Purchases</span> <br/>Via Dashboard</h2>
+        <h2 className="purchases__info-title title">Control <span>Purchases</span> <br/>Via Dashboard</h2>
         <div className="purchases-cards">
           {purchases.map((purchas, index) => {
             return <Purchases 

@@ -4,7 +4,7 @@ import { dishes } from "../../helpers/dishes";
 const DishesBlock = () => {
   return (
     <section className="dish-block">
-    <h2 className="dish__title">Our Top <span>Dishes</span></h2>
+    <h2 className="dish__title title">Our Top <span>Dishes</span></h2>
       <div className="dish-cards">
         {dishes.map((dish, index) => {
           return <Dishes 
